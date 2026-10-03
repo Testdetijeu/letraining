@@ -1,0 +1,12 @@
+{
+  "name": "MusCul",
+  "short_name": "MusCul",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFF8F3",
+  "theme_color": "#F47766",
+  "icons": [
+    {"src": "muscul-icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "muscul-app-icon-1024.png", "sizes": "1024x1024", "type": "image/png"}
+  ]
+}
