@@ -3263,8 +3263,13 @@ button[aria-label*="couleur" i]:active{
   </section>
 </div>
 <main>
-<h1 class="brand-title">MusCul</h1>
-<p class="sub" style="text-align:center">Vous pouvez toujours repiger</p>
+<div class="game-brand-lockup" aria-label="MusCul — Vous pouvez toujours repiger">
+  <img class="game-brand-logo" src="muscul-logo-transparent-1024.png" alt="" aria-hidden="true">
+  <div class="game-brand-copy">
+    <h1 class="brand-title">MusCul</h1>
+    <p class="sub">Vous pouvez toujours repiger</p>
+  </div>
+</div>
 <div id="topProgress" style="display:none;text-align:center;font-size:16px;font-weight:900;letter-spacing:.08em;margin:12px 0 10px;color:var(--accent)">
 CARTE 1 / 12
 </div>
@@ -3295,7 +3300,7 @@ CARTE 1 / 12
 </div>
 <div id="adultAdjust" class="adult-adjust" style="display:none" aria-label="Ajuster les cartes chaudes restantes">
   <button type="button" id="adultMinus" class="adult-adjust-btn" title="Une carte chaude de moins">−</button>
-  <span><strong id="adultRemaining">0</strong> adultes restantes</span>
+  <span><strong id="adultRemaining">0</strong> cartes chaudes restantes</span>
   <button type="button" id="adultPlus" class="adult-adjust-btn" title="Une carte chaude de plus">+</button>
 </div>
 
@@ -7449,6 +7454,49 @@ body.game-started img[src="muscul-logo-transparent-1024.png"]{
 }
 </style>
 
+
+
+<style id="muscul-v199-game-brand-lockup">
+/* v199 — logo + titre + sous-titre forment un seul bloc réellement centré. */
+.game-brand-lockup{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  width:max-content;
+  max-width:calc(100% - 28px);
+  margin:16px auto 8px;
+}
+body.game-started .game-brand-lockup .game-brand-logo{
+  width:112px!important;
+  height:112px!important;
+  object-fit:contain!important;
+  flex:0 0 112px;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+.game-brand-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+}
+.game-brand-lockup .brand-title{
+  margin:0!important;
+  text-align:center!important;
+}
+.game-brand-lockup .sub{
+  margin:8px 0 0!important;
+  text-align:center!important;
+}
+@media(max-width:560px){
+  .game-brand-lockup{gap:14px;max-width:calc(100% - 18px);margin-top:10px}
+  body.game-started .game-brand-lockup .game-brand-logo{width:92px!important;height:92px!important;flex-basis:92px}
+  .game-brand-lockup .sub{margin-top:5px!important}
+}
+</style>
 
 <script id="muscul-v197-session-persistence">
 /* ============================================================
